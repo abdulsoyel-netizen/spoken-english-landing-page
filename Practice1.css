@@ -1,0 +1,256 @@
+/* Global styles */
+:root {
+    color-scheme: light;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f6f8fc;
+    color: #172026;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 999px;
+    padding: 0.95rem 1.8rem;
+    font-weight: 700;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: #0f6fff;
+    color: white;
+}
+
+.btn-secondary {
+    background: rgba(15, 111, 255, 0.12);
+    color: #0f6fff;
+}
+
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 6rem;
+    background: linear-gradient(135deg, #eef4ff 0%, #ffffff 100%);
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.eyebrow,
+.section-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #436176;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 4vw, 4.2rem);
+    margin: 0;
+    line-height: 0.95;
+}
+
+.hero-copy {
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 1.5rem 0 2rem;
+    color: #4b5868;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 28px;
+    padding: 2rem;
+    box-shadow: 0 40px 80px rgba(31, 64, 125, 0.08);
+}
+
+.card-label {
+    display: inline-block;
+    background: #e5f1ff;
+    color: #0f6fff;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #142b4c;
+}
+
+.card p {
+    margin: 1rem 0 0;
+    color: #586877;
+}
+
+.features,
+.testimonial,
+.cta {
+    padding: 4rem 6rem;
+}
+
+.section-header h2,
+.testimonial-text h2,
+.cta h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin: 0.25rem 0 1rem;
+    color: #12243e;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(15, 49, 96, 0.08);
+}
+
+.feature-card h3 {
+    margin: 0 0 1rem;
+    color: #0f4b93;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #4f5d70;
+}
+
+.testimonial {
+    background: radial-gradient(circle at top left, rgba(15, 111, 255, 0.1), transparent 40%), #ffffff;
+}
+
+.testimonial-text {
+    max-width: 760px;
+}
+
+.testimonial-text p {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0;
+    color: #445367;
+}
+
+.testimonial-author {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    color: #0f4b93;
+}
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background: #0f6fff;
+    color: white;
+    border-radius: 32px;
+    padding: 3rem 4rem;
+}
+
+.cta p {
+    max-width: 520px;
+    margin: 0.75rem 0 0;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.footer {
+    padding: 2rem 6rem;
+    color: #5c6f85;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 960px) {
+    .hero,
+    .features,
+    .testimonial,
+    .cta,
+    .footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .cta {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1.75rem;
+    }
+}
+
